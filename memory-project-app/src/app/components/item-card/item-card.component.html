@@ -1,0 +1,14 @@
+<div class="card-component" *ngIf="getItemCards()">
+  <div class="card" style="width: 18rem;" *ngFor="let item of itemCards">
+    <img [src]="item.img" class="card-img-top" [alt]="item.alt">
+    <div class="card-body">
+      <p class="card-text">
+        {{ item.dsc }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="cardImgtest" *ngFor="let img from imgs">
+  <img [src]="img" alt="">
+</div>

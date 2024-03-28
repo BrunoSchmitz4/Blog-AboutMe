@@ -12,7 +12,8 @@ export class HeaderComponent {
   header_title = 'Bruno Schmitz';
 
   anchors: Array<anchorInterface> = [
-    {name: 'Project', href: ''},
+    {name: 'Projeto', href: 'project'},
+    {name: 'Contato', href: 'contact'},
   ];
   constructor() {
     this.anchors.forEach(anchor => {
