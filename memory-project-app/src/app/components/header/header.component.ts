@@ -1,12 +1,29 @@
 import { Component } from '@angular/core';
-
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
 
+  header_title = 'Bruno Schmitz';
+
+  anchors: Array<anchorInterface> = [
+    {name: 'Project', href: ''},
+  ];
+  constructor() {
+    this.anchors.forEach(anchor => {
+      if(!anchor.href) anchor.class = 'nav-link disabled';
+      else anchor.class = 'nav-link'
+    });
+  }
+}
+
+interface anchorInterface {
+  name: string;
+  href: string;
+  class?: string;
 }
