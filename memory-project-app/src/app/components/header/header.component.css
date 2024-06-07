@@ -10,6 +10,10 @@
   margin-bottom: 400px !important;
 }
 
+.header-title {
+  margin-left: 0.45rem;
+}
+
 #first-header-division {
   width: 30%;
   height: 100%;

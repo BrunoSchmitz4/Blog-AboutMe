@@ -12,7 +12,12 @@ import { CommonModule } from '@angular/common';
 })
 export class ItemCardComponent {
 
-  itemCards: Array<itemCard> = [
+  typeOfCard = "";
+
+  isProject = false;
+  isContact = false;
+
+  itemCardsProject: Array<itemCard> = [
     {
       img: '../../../assets/imgs/goodKids.png',
       tlt: 'Good Kid',
@@ -27,13 +32,31 @@ export class ItemCardComponent {
     },
   ];
 
+  itemCardsContact: Array<itemCard> = [
+
+  ]
+
   constructor() {
     // const imgs = this.getItemCardsImg();
   }
 
+  public cardsTheme(option: string) {
+    option.toLowerCase;
+    if(option == "Projetos") {
+      this.isProject = true;
+      return true;
+    }
+    if(option == "Contatos") {
+      this.isContact = true;
+      return true;
+    }
+    return false
+  }
+
   /** Exibe os cards se há os dados */
-  public getItemCards() {
-    if(this.itemCards.length >= 1) return true;
+  public getItemProjectCards() {
+    if(this.itemCardsProject.length >= 1 && this.isProject) return true;
+    if(this.itemCardsContact.length >= 1 && this.isContact) return true;
     return false;
     // this.itemCards.forEach(item => {
     //   if(item.img && item.alt && item.dsc) return true;
