@@ -1,14 +1,17 @@
 <div class="card-component" *ngIf="getItemCards()">
+  <h2 class="component-title">Projetos realizados</h2>
   <div class="card" style="width: 18rem;" *ngFor="let item of itemCards">
     <img [src]="item.img" class="card-img-top" [alt]="item.alt">
+    <h4 class="card-title"> {{ item.tlt }} </h4>
     <div class="card-body">
-      <p class="card-text">
+      <p class="card-dsc">
         {{ item.dsc }}
       </p>
+      <a class="card-btn" role="button" href="#">Saiba Mais</a>
     </div>
   </div>
 </div>
 
-<div class="cardImgtest" *ngFor="let img from imgs">
+<!-- <div class="cardImgtest" *ngFor="let img from imgs">
   <img [src]="img" alt="">
-</div>
+</div> -->

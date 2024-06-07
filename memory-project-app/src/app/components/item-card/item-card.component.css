@@ -1,0 +1,50 @@
+.component-title {
+  width: 100%;
+  text-align: center;
+  color: rgb(80, 162, 255);
+}
+
+.card-component {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: flex-start;
+  justify-content: space-evenly;
+}
+
+.card {
+  background-color: rgb(49, 49, 49);
+  border-radius: 6px;
+  min-height: 400px;
+  margin: 0.45rem 0;
+}
+
+.card-title {
+  margin-left: 4%;
+  color: white
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.card-dsc{
+  color: rgb(175, 175, 175);
+}
+
+.card-btn {
+  border: none;
+  background-color: lightskyblue;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  height: 100%;
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+}
