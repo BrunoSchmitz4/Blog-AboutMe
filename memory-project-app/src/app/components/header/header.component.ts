@@ -10,11 +10,13 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
 
   header_title = 'Bruno Schmitz';
+  darkModeIcon = '';
 
   anchors: Array<anchorInterface> = [
     {name: 'Projeto', href: 'project'},
     {name: 'Contato', href: 'contact'},
   ];
+
   constructor() {
     this.anchors.forEach(anchor => {
       if(!anchor.href) anchor.class = 'nav-link disabled';

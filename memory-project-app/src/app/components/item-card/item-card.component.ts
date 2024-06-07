@@ -17,7 +17,7 @@ export class ItemCardComponent {
   isProject = false;
   isContact = false;
 
-  itemCardsProject: Array<itemCard> = [
+  itemCardsProject: Array<itemCardProject> = [
     {
       img: '../../../assets/imgs/goodKids.png',
       tlt: 'Good Kid',
@@ -30,10 +30,36 @@ export class ItemCardComponent {
       dsc: 'Meghan Elizabeth Trainor é uma cantora, compositora e produtora norte-americana.',
       alt: 'Ela cantou em Smurfs!'
     },
+    {
+      img: '../../../assets/imgs/Snivy.jpg',
+      tlt: 'Snivy PokéBot',
+      dsc: 'Um projeto de desenvolvimento de bot para servidor de Discord, tematizado com Snivy.',
+      alt: 'Snivy é o meu pokémon favorito!'
+    },
   ];
 
-  itemCardsContact: Array<itemCard> = [
-
+  itemCardsContact: Array<itemCardContact> = [
+    {
+      img: '../../../assets/imgs/githubImgAccount.png',
+      dsc: 'Bruno_Ss (BrunoSchmitz4)',
+      lnk: 'https://github.com/BrunoSchmitz4',
+      alt: 'Conta GitHub',
+      banner: '../../../assets/imgs/gihubbanner.jpeg',
+    },
+    {
+      img: '../../../assets/imgs/githubImgAccount.png',
+      dsc: 'Bruno_Ss (BrunoSchmitz4)',
+      lnk: 'https://github.com/BrunoSchmitz4',
+      alt: 'Conta GitHub',
+      banner: '../../../assets/imgs/gihubbanner.jpeg',
+    },
+    {
+      img: '../../../assets/imgs/githubImgAccount.png',
+      dsc: 'Bruno_Ss (BrunoSchmitz4)',
+      lnk: 'https://github.com/BrunoSchmitz4',
+      alt: 'Conta GitHub',
+      banner: '../../../assets/imgs/gihubbanner.jpeg',
+    }
   ]
 
   constructor() {
@@ -54,7 +80,7 @@ export class ItemCardComponent {
   }
 
   /** Exibe os cards se há os dados */
-  public getItemProjectCards() {
+  public getItemCards() {
     if(this.itemCardsProject.length >= 1 && this.isProject) return true;
     if(this.itemCardsContact.length >= 1 && this.isContact) return true;
     return false;
@@ -82,9 +108,17 @@ export class ItemCardComponent {
 
 }
 
-interface itemCard {
+interface itemCardProject {
   img: string,
   tlt: string,
   dsc: string,
   alt: string,
+}
+
+interface itemCardContact {
+  img: string,
+  dsc: string,
+  lnk: string,
+  alt: string,
+  banner: string,
 }

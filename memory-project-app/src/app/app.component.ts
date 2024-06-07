@@ -16,4 +16,15 @@ import { ItemCardComponent } from './components/item-card/item-card.component';
 })
 export class AppComponent {
   title = 'memory-project-app';
+
+  constructor() {
+
+  }
+
+  public darkModeTheme(isDark: boolean) {
+    if(isDark) {
+      console.log("Dark mode activaded.");
+    }
+    console.log("Dark mode desactivaded.");
+  }
 }
