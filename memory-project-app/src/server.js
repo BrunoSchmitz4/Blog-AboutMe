@@ -1,9 +1,9 @@
 // var mysql = require('mysql');
 // var connection = mysql.createConnection({
 //   host: 'localhost',
-//   user: 'seu_usuario',
-//   password: 'sua_senha',
-//   database: 'seu_banco_de_dados'
+//   user: 'root',
+//   password: '',
+//   database: 'memories_database'
 // });
 
 // connection.connect(function(err) {

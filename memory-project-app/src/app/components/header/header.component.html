@@ -3,21 +3,14 @@
     <h3 class="header-title">{{ header_title }}</h3>
   </div>
   <div class="header-division" id="second-header-division">
-    <nav class="navbar navbar-expand-sm bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Home</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a [class]="anchor.class" aria-disabled="true" aria-current="page" [href]="anchor.href" *ngFor="let anchor of anchors">
-              {{ anchor.name }}
-            </a>
-          </div>
-        </div>
-        <button class="navbar-btn-darkMode"></button>
+    <nav class="header-navbar">
+      <div *ngFor="let anchor of anchors">
+        <button [class]="anchor.class">{{ anchor.name }}</button>
       </div>
+      <button [class]="navbar_btn_Mode" (click)="switchMode()">
+        <img [src]="navbar_icon" alt="Altere o modo" class="navbar-icon">
+      </button>
+      <button class="navbar-btn-menu"><img class="navbar-menu-icon" [src]="menu_icon" alt=""></button>
     </nav>
   </div>
 </div>

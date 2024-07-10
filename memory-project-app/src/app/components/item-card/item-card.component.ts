@@ -17,6 +17,7 @@ export class ItemCardComponent {
   isProject = false;
   isContact = false;
 
+
   itemCardsProject: Array<itemCardProject> = [
     {
       img: '../../../assets/imgs/goodKids.png',
@@ -62,9 +63,7 @@ export class ItemCardComponent {
     }
   ]
 
-  constructor() {
-    // const imgs = this.getItemCardsImg();
-  }
+  constructor() {}
 
   public cardsTheme(option: string) {
     option.toLowerCase;

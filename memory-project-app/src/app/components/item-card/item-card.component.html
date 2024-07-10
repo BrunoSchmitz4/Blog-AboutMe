@@ -22,7 +22,7 @@
 
   <div class="cards-typeofVisibility" *ngIf="isContact">
     <div class="card-component" *ngIf="getItemCards()">
-    <h2 class="component-title">Formas de contato</h2>
+    <h2 class="component-title component-title">Formas de contato</h2>
     <div class="card-account" *ngFor="let item of itemCardsContact">
       <img class="card-account-icon" [src]="item.img" [alt]="item.alt">
       <a class="card-account-btn" [href]="item.lnk" role="button">

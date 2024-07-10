@@ -9,8 +9,13 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
 
-  header_title = 'Bruno Schmitz';
-  darkModeIcon = '';
+  menu_icon = "../../../assets/imgs/MenuIcon.png"
+  header_title = 'Olá, sou o Bruno';
+  darkModeIcon = '../../../assets/imgs/moon.png';
+  lightModeIcon = '../../../assets/imgs/sunIcon.png';
+  ehDarkMode = false;
+  navbar_icon = this.lightModeIcon;
+  navbar_btn_Mode = 'navbar-btn-lightMode'
 
   anchors: Array<anchorInterface> = [
     {name: 'Projeto', href: 'project'},
@@ -20,8 +25,20 @@ export class HeaderComponent {
   constructor() {
     this.anchors.forEach(anchor => {
       if(!anchor.href) anchor.class = 'nav-link disabled';
-      else anchor.class = 'nav-link'
+      else anchor.class = 'navbar-btn'
     });
+  }
+
+  switchMode() {
+    this.ehDarkMode = !this.ehDarkMode;
+    if (this.ehDarkMode == true) {
+      this.navbar_icon = this.darkModeIcon;
+      this.navbar_btn_Mode = 'navbar-btn-darkMode';
+    }
+      else {
+        this.navbar_icon = this.lightModeIcon;
+        this.navbar_btn_Mode = 'navbar-btn-lightMode'
+      }
   }
 }
 
