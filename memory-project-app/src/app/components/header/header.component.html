@@ -1,16 +1,18 @@
-<div class="header-component bg-body-tertiary fixed-top">
+<div class="header-component fixed-top">
   <div class="header-division" id="first-header-division">
     <h3 class="header-title">{{ header_title }}</h3>
   </div>
   <div class="header-division" id="second-header-division">
-    <nav class="header-navbar">
-      <div *ngFor="let anchor of anchors">
-        <button [class]="anchor.class">{{ anchor.name }}</button>
+    <nav class="header-navbar" *ngIf="isDesktop">
+      <div class="navbar-nav" *ngFor="let anchor of anchors">
+        <a [class]="anchor.class" aria-disabled="true" aria-current="page" [href]="anchor.href">
+          {{ anchor.name }}
+        </a>
       </div>
-      <button [class]="navbar_btn_Mode" (click)="switchMode()">
-        <img [src]="navbar_icon" alt="Altere o modo" class="navbar-icon">
-      </button>
-      <button class="navbar-btn-menu"><img class="navbar-menu-icon" [src]="menu_icon" alt=""></button>
     </nav>
+    <button [class]="navbar_btn_Mode" (click)="switchMode()">
+      <img [src]="navbar_icon" alt="Altere o modo" class="navbar-icon">
+    </button>
+    <button class="navbar-btn-menu"><img class="navbar-menu-icon" [src]="menu_icon" alt=""></button>
   </div>
 </div>

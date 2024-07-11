@@ -10,14 +10,19 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
 
   menu_icon = "../../../assets/imgs/MenuIcon.png"
-  header_title = 'Olá, sou o Bruno';
+  header_title = 'Memories, by Bruno';
   darkModeIcon = '../../../assets/imgs/moon.png';
   lightModeIcon = '../../../assets/imgs/sunIcon.png';
   ehDarkMode = false;
   navbar_icon = this.lightModeIcon;
   navbar_btn_Mode = 'navbar-btn-lightMode'
 
+  isDesktop: boolean = true
+
+  appScreen = window;
+
   anchors: Array<anchorInterface> = [
+    {name: 'Home', href: 'home'},
     {name: 'Projeto', href: 'project'},
     {name: 'Contato', href: 'contact'},
   ];
@@ -27,7 +32,15 @@ export class HeaderComponent {
       if(!anchor.href) anchor.class = 'nav-link disabled';
       else anchor.class = 'navbar-btn'
     });
+
+    this.appScreen.addEventListener('resize', () => {
+      if(this.appScreen.innerWidth <= 425) {
+        this.isDesktop = false
+      }
+    })
   }
+
+
 
   switchMode() {
     this.ehDarkMode = !this.ehDarkMode;

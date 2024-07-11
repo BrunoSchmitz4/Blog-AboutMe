@@ -4,10 +4,16 @@
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  max-width: 620px;
   height: max-content;
   max-height: 400px;
-  background-color: rgb(214, 243, 243);
+  background-color: #FFE5D9;
   margin-bottom: 400px !important;
+  margin: auto;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: #9D8189;
+  font-size: 16px;
 }
 
 .header-title {
@@ -23,6 +29,8 @@
   width: 70%;
   height: 100%;
   display: flex;
+  align-items: center;
+  align-content: center;
   justify-content: space-evenly;
   padding: 0.45rem;
 }
@@ -53,6 +61,7 @@
   align-items: center;
   align-content: center;
   justify-content: center;
+  text-decoration: none;
 }
 
 .navbar-btn-menu {
