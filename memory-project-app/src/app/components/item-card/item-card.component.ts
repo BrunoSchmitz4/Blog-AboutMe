@@ -12,10 +12,28 @@ import { CommonModule } from '@angular/common';
 })
 export class ItemCardComponent {
 
+  cardIdIdentifier = document.getElementById('project');
   typeOfCard = "";
 
   isProject = false;
   isContact = false;
+
+  cardHeaderContent: Array<itemCardHeader> = [
+    {
+      header_title: 'Gato de Schrodingër'
+    }
+  ];
+  cardMainContent: Array<itemCardMain> = [
+    {
+      main_span: 'Ele está vivo ou morto?',
+      main_img: 'Missing img file!'
+    }
+  ];
+  cardFooterContent: Array<itemCardFooter> = [
+    {
+      footer_span: 'Saiba Mais!'
+    }
+  ]
 
 
   itemCardsProject: Array<itemCardProject> = [
@@ -89,22 +107,22 @@ export class ItemCardComponent {
     // });
   }
 
-  // public getItemCardsImg(): string[]{
-  //   let folderPath = '../../../assets/imgs/';
-  //   try {
-  //     const files = fs.readdirSync(folderPath);
-  //     const imageFiles = files.filter((file) => {
-  //         const extension = path.extname(file).toLowerCase();
-  //         return ['.jpg', '.jpeg', '.png', '.gif'].includes(extension);
-  //     });
-  //     return imageFiles;
-  //   } catch (error) {
-  //       console.error('Error reading folder:', error);
-  //       return [];
-  //   }
+  public hasHeader() {
+    // if (this.cardIdIdentifier.toLowerCase() == 'project') return true;
+    // return false;
+    return true
+  }
 
-  // }
+  public hasMain(): boolean {
+    // if (this.cardIdIdentifier.toLowerCase() == 'project') return true;
+    // return false;
+    return true
+  }
 
+  public hasFooter() {
+    if (this.cardIdIdentifier?.nodeValue == 'project') return true;
+    return false;
+  }
 }
 
 interface itemCardProject {
@@ -120,4 +138,17 @@ interface itemCardContact {
   lnk: string,
   alt: string,
   banner: string,
+}
+
+interface itemCardHeader {
+  header_title?: string
+}
+
+interface itemCardMain {
+  main_span?: string,
+  main_img?: string,
+}
+
+interface itemCardFooter {
+  footer_span?: string,
 }

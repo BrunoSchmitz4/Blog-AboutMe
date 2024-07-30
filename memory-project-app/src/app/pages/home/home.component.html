@@ -1,5 +1,11 @@
 <div class="home-component page-component">
-  <app-item-card></app-item-card>
+  <div class="home-card-container" *ngFor="let card of cardHeaderContent" >
+    <div class="home-card">
+      <span class="home-card-name"></span>
+      <img src="" class="home-card-img" alt="">
+      <span class="home-card-dsc">Teste</span>
+    </div>
+  </div>
   <app-projects></app-projects>
   <app-contact></app-contact>
 </div>

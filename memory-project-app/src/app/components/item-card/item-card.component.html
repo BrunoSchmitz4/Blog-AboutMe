@@ -1,4 +1,17 @@
-<div class="cards-visibility" *ngIf="cardsTheme('Contatos')">
+<div class="item-card">
+  <div class="item-card-header" *ngIf="hasHeader()">
+    <h4 class="item-card-header-title">Título do Card</h4>
+  </div>
+  <div class="item-card-main" *ngIf="hasMain()">
+    <span class="item-card-main-text">Conteúdo do Card</span>
+    <img class="item-card-img" src="" alt="">
+  </div>
+  <div class="item-card-footer" *ngIf="hasFooter()">
+    <span class="item-card-footer-text">Rodapé do Card</span>
+  </div>
+</div>
+
+<!-- <div class="cards-visibility" *ngIf="cardsTheme('Contatos')">
 
   <div class="cards-typeofVisibility" *ngIf="isProject">
     <div class="card-component" *ngIf="getItemCards()">
@@ -14,10 +27,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="cardImgtest" *ngFor="let img from imgs">
-      <img [src]="img" alt="">
-    </div> -->
   </div>
 
   <div class="cards-typeofVisibility" *ngIf="isContact">
@@ -31,4 +40,4 @@
     </div>
     </div>
   </div>
-</div>
+</div> -->
