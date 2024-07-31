@@ -16,10 +16,11 @@ import { CommonModule } from '@angular/common';
 export class HomeComponent {
 
   cardHeaderContent: Array<homeCard> = [
-    {src: '#', dsc: 'Teste', anchor: '#'},
-    {src: '#', dsc: 'Teste', anchor: '#'},
-    {src: '#', dsc: 'Teste', anchor: '#'},
-    {src: '#', dsc: 'Teste', anchor: '#'},
+    {src: '#', dsc: 'Projeto Spotify React (Alura)', anchor: '#'},
+    {src: '#', dsc: 'Projeto Pokémon: Pokedéx', anchor: '#'},
+    {src: '#', dsc: 'Projeto Pokémon: Guia de Unova', anchor: '#'},
+    {src: '#', dsc: 'Projeto Calculadora', anchor: '#'},
+    {src: '#', dsc: 'Projeto Landing Page: Café de Gatos', anchor: '#'},
   ];
 
   public validaCard(temTitle: string) {
