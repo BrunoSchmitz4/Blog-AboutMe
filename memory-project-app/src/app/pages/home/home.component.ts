@@ -21,6 +21,11 @@ export class HomeComponent {
     {src: '#', dsc: 'Teste', anchor: '#'},
     {src: '#', dsc: 'Teste', anchor: '#'},
   ];
+
+  public validaCard(temTitle: string) {
+    if(temTitle) return "home-card-img"
+    return "home-card-img-simple"
+  }
 }
 
 interface homeCard {
@@ -28,4 +33,5 @@ interface homeCard {
   src?: string;
   dsc?: string;
   anchor?: string;
+  // class?: string;
 }
