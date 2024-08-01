@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { OnChanges } from '@angular/core';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -17,7 +18,9 @@ export class HeaderComponent {
   navbar_icon = this.lightModeIcon;
   navbar_btn_Mode = 'navbar-btn-lightMode'
 
+  displayBtn: boolean = true;
   isDesktop: boolean = true
+  isVisible: string = "header-navbar";
 
   appScreen = window;
 
@@ -41,6 +44,12 @@ export class HeaderComponent {
   }
 
 
+  showButton(): boolean {
+    this.displayBtn = !this.displayBtn
+    if (this.displayBtn) this.isVisible = "header-navbar";
+    else this.isVisible = "header-navbar-invisible";
+    return this.displayBtn
+  }
 
   switchMode() {
     this.ehDarkMode = !this.ehDarkMode;
@@ -54,7 +63,6 @@ export class HeaderComponent {
       }
   }
 }
-
 interface anchorInterface {
   name: string;
   href: string;

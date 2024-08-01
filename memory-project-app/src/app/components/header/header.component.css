@@ -36,13 +36,35 @@
   padding: 0.45rem;
 }
 
-.header-navbar {
+/* .header-navbar {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   align-content: center;
   justify-content: center;
+} */
+
+.header-navbar, .header-navbar-invisible {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.header-navbar-invisible {
+  visibility: hidden;
+
+}
+
+.header-btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-end;
 }
 
 .navbar-btn, .navbar-btn-menu {

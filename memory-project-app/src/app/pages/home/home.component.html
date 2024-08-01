@@ -3,7 +3,7 @@
     <div class="home-card" *ngFor="let card of cardHeaderContent">
       <!-- <span class="home-card-name" *ngIf="card.title" >Nome teste</span> -->
       <span class="home-card-link">Saiba mais</span>
-      <img src="../../../assets/imgs/cursedKieran.jpg" class="home-card-img-simple" alt="">
+      <img [src]="card.src" class="home-card-img-simple" alt="">
       <span class="home-card-dsc">{{card.dsc}}</span>
     </div>
   </div>

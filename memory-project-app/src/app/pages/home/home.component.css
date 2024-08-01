@@ -27,21 +27,21 @@
 
   text-align: justify;
   box-shadow: 0px 3px 4px rgb(212, 212, 212);
+  background-image: image-set("../../../assets/imgs/cursedKieran.jpg")
   /* border: 1px solid red; */
 }
 
 .home-card-container {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  align-content: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
 
   flex-wrap: wrap;
   /* height: 800px; */
   width: 100vw;
   max-width: 620px;
-  /* margin: auto; */
 }
 
 .home-card-img, .home-card-img-simple {
