@@ -1,0 +1,13 @@
+.project-tag-item {
+  border: 1px solid;
+  border-radius: 8px;
+  border-color: rgb(91, 121, 255);
+  background-color: rgb(219, 233, 255);
+  color: rgb(109, 160, 255);
+  font-size: 12px;
+  width: 64px;
+  text-align: center;
+  height: auto;
+  text-decoration: none;
+  list-style: none;
+}
