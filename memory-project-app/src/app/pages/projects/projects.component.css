@@ -1,0 +1,56 @@
+.project-card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    /* border: 1px solid red; */
+    max-width: 620px;
+    padding: 0.45rem auto;
+}
+
+.project-card {
+    background-color: #aab2be;
+    border-radius: 12px;
+}
+
+.project-title {
+    text-align: center;
+}
+
+.project-list-title, .project-title {
+    color: white;
+}
+
+.project-list-title, .project-description {
+    margin-left: 4px;
+}
+
+.project-description {
+    color: #4d4d4d;
+}
+
+.project-tag-list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+}
+
+.project-tag-item {
+    border: 1px solid;
+    border-radius: 8px;
+    border-color: rgb(91, 121, 255);
+    background-color: rgb(219, 233, 255);
+    color: rgb(109, 160, 255);
+    font-size: 12px;
+    width: 64px;
+    text-align: center;
+    height: auto;
+    text-decoration: none;
+    list-style: none;
+}

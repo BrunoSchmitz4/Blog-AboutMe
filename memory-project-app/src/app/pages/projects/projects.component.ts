@@ -11,3 +11,7 @@ import { ItemCardComponent } from "../../components/item-card/item-card.componen
 export class ProjectsComponent {
 
 }
+
+interface tagInterface {
+    title: string
+}
